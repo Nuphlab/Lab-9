@@ -6,19 +6,34 @@
 //  Copyright © 2019 Westley Holden. All rights reserved.
 //
 
-#include <string>
 #include "BakedGood.h"
 #include "Bread.h"
 #include "LayerCake.h"
 #include "CupCake.h"
+#include "BakedGood.h"
+#include "Bread.h"
+#include "Cake.h"
+#include "LayerCake.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+int main() {
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+   cout << "**Bread and Cakes Bakery**" << endl << endl;
+   cout << "Enter sub-order (enter \"done\" to finish)" << endl;
+   
+   string bakedGood = "";
+   while (bakedGood != "done" && ) {
+      string options;
+      int quantity;
+      cout << "Sub-order:" << endl;
+      getline(cin, bakedGood);
+      getline(cin, options);
+      cin >> quantity;
+      cin.ignore();
+   }
+
     return 0;
 }

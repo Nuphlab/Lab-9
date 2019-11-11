@@ -9,10 +9,15 @@
 #ifndef Cake_h
 #define Cake_h
 
+#include "BakedGood.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class Cake : public BakedGood {
+
+};
 
 #endif /* Cake_hpp */

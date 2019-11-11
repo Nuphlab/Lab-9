@@ -9,10 +9,19 @@
 #ifndef Bread_h
 #define Bread_h
 
+#include "BakedGood.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+class Bread : public BakedGood {
+public:
+   string ToString();
+   double DiscountedPrice(int totalGoods);
+protected:
+   double totalDiscountedPrice;
+   string basePriceDescription;
+};
 #endif /* Bread_hpp */

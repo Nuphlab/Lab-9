@@ -7,3 +7,12 @@
 //
 
 #include "CupCake.h"
+
+string CupCake::ToString() {
+   //Returns a string containing the basic description and base price of the object.
+   return basePriceDescription;
+}
+double CupCake::DiscountedPrice(int totalGoods) {
+   /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
+   return totalDiscountedPrice;
+}

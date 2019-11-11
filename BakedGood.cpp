@@ -7,3 +7,7 @@
 //
 
 #include "BakedGood.h"
+
+BakedGood::BakedGood() {
+
+}

@@ -9,10 +9,20 @@
 #ifndef LayerCake_h
 #define LayerCake_h
 
+#include "Cake.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+class LayerCake : public Cake {
+public:
+   string ToString();
+   double DiscountedPrice(int totalGoods);
+protected:
+   double totalDiscountedPrice;
+   string basePriceDescription;
+};
 
 #endif /* LayerCake_hpp */

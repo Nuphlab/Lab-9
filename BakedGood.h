@@ -15,6 +15,10 @@
 
 using namespace std;
 
+class BakedGood {
+   BakedGood();
+};
+
 #endif /* BakedGood_hpp */
 
 
