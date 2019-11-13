@@ -9,6 +9,7 @@
 #ifndef BakedGood_h
 #define BakedGood_h
 
+#include "Bread.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -16,7 +17,14 @@
 using namespace std;
 
 class BakedGood {
+public:
    BakedGood();
+   BakedGood(string bakedGoodType, string options, int quantity);
+   virtual void ToString() = 0;
+protected:
+   string treatType;
+   string treatOptions;
+   int itemQuantity;
 };
 
 #endif /* BakedGood_hpp */

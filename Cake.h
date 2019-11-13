@@ -17,6 +17,9 @@
 using namespace std;
 
 class Cake : public BakedGood {
+public:
+
+protected:
 
 };
 

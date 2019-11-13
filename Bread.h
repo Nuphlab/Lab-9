@@ -18,10 +18,12 @@ using namespace std;
 
 class Bread : public BakedGood {
 public:
-   string ToString();
-   double DiscountedPrice(int totalGoods);
+   Bread();
+   Bread(string Breadtype, string options, int quantity);
+   virtual void ToString();
+   virtual double DiscountedPrice(int totalGoods);
 protected:
-   double totalDiscountedPrice;
-   string basePriceDescription;
+   string breadType;
+   double basePrice;
 };
 #endif /* Bread_hpp */

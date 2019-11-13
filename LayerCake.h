@@ -18,11 +18,15 @@ using namespace std;
 
 class LayerCake : public Cake {
 public:
-   string ToString();
-   double DiscountedPrice(int totalGoods);
-protected:
-   double totalDiscountedPrice;
-   string basePriceDescription;
+   LayerCake();
+   LayerCake(string bakedGoodType, string options, int quantity);
+   virtual void ToString();
+   virtual double DiscountedPrice(int totalGoods);
+private:
+   string flavor;
+   string frosting;
+   int layers;
+   double basePrice;
 };
 
 #endif /* LayerCake_hpp */

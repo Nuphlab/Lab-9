@@ -18,11 +18,18 @@ using namespace std;
 
 class CupCake : public Cake {
 public:
-   string ToString();
-   double DiscountedPrice(int totalGoods);
+   CupCake();
+   CupCake(string bakedGoodType, string options, int quantity);
+   virtual void ToString();
+   virtual double DiscountedPrice(int totalGoods);
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;
+private:
+   string flavor;
+   string frosting;
+   string sprinklesColor;
+   double basePrice;
 };
 
 #endif /* CupCake_hpp */
