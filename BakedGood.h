@@ -9,7 +9,6 @@
 #ifndef BakedGood_h
 #define BakedGood_h
 
-#include "Bread.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -27,6 +26,6 @@ protected:
    int itemQuantity;
 };
 
-#endif /* BakedGood_hpp */
+#endif 
 
 
