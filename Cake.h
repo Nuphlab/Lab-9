@@ -18,9 +18,12 @@ using namespace std;
 
 class Cake : public BakedGood {
 public:
-
+   Cake();
+   virtual void ToString() = 0;
 protected:
-
+   string cakeType;
+   string cakeFlavor;
+   
 };
 
 #endif /* Cake_hpp */

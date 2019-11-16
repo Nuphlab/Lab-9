@@ -10,13 +10,17 @@
 LayerCake::LayerCake() {
    basePrice = 9.00;
 }
-LayerCake::LayerCake(string bakedGoodType, string options, int quantity) {
+LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) {
    treatType = bakedGoodType;
-   treatOptions = options;
-   itemQuantity = quantity;
+   flavorOfCake = cakeFlavor;
+   flavorOfFrosting = frostingFlavor;
+   cakeLayers = layers;
+   cakeQuantity = quantity ;
+   basePrice = 9.00;
 }
 void LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
+   cout << cakeQuantity << "-layer " << flavorOfCake << " with " << flavorOfFrosting << " frosting ($" << fixed << setprecision(6) << basePrice << ")" << endl;
 }
 double LayerCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/

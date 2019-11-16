@@ -19,11 +19,13 @@ class BakedGood {
 public:
    BakedGood();
    BakedGood(string bakedGoodType, string options, int quantity);
+   //BakedGood(string bakedGoodType, string options, int quantity);
    virtual void ToString() = 0;
 protected:
    string treatType;
    string treatOptions;
    int itemQuantity;
+   double basePrice;
 };
 
 #endif 

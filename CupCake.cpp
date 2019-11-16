@@ -14,6 +14,7 @@ CupCake::CupCake(string bakedGoodType, string options, int quantity) {
    treatType = bakedGoodType;
    treatOptions = options;
    itemQuantity = quantity;
+   basePrice = 1.95;
 }
 void CupCake::ToString() {
    //Returns a string containing the basic description and base price of the object.

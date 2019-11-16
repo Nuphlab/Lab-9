@@ -41,11 +41,18 @@ int main() {
                theGoods.push_back(newBread);
             }
          }
-         else if (bakedGoodType == "Layer-Cake") {
-            getline(cin, options);
+         else if (bakedGoodType == "Layer-cake") {
+            string cakeFlavor;
+            string frostingFlavor;
+            int layers;
+
+            getline(cin, cakeFlavor);
+            getline(cin, frostingFlavor);
+            cin >> layers;
+            cin.ignore();
             cin >> quantity;
             cin.ignore();
-            LayerCake* newLayerCake = new LayerCake(bakedGoodType, options, quantity);
+            LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
             theGoods.push_back(newLayerCake);
          }
          else if (bakedGoodType == "Cupcake") {
@@ -61,8 +68,8 @@ int main() {
             theGoods.at(i)->ToString();
          }
       }
-      cout << "Sub-order:" << endl;
-      getline(cin, bakedGoodType);
+      //cout << "Sub-order:" << endl;
+      //getline(cin, bakedGoodType);
    }
 
    cout << "Good Bye";

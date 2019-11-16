@@ -5,17 +5,17 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-
+#include <vector>
+#include <iomanip>
 using namespace std;
 
 class Bread : public BakedGood {
 public:
    Bread();
-   Bread(string Breadtype, string options, int quantity);
+   Bread(string bakedGoodType, string options, int quantity);
    virtual void ToString();
    virtual double DiscountedPrice(int totalGoods);
 protected:
    string breadType;
-   double basePrice;
 };
 #endif /* Bread_hpp */

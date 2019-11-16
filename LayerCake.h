@@ -13,20 +13,23 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
 class LayerCake : public Cake {
 public:
    LayerCake();
-   LayerCake(string bakedGoodType, string options, int quantity);
+   LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity);
    virtual void ToString();
    virtual double DiscountedPrice(int totalGoods);
 private:
-   string flavor;
-   string frosting;
-   int layers;
+   string treatType;
+   string flavorOfCake;
+   string flavorOfFrosting;
+   int cakeLayers;
    double basePrice;
+   int cakeQuantity;
 };
 
 #endif /* LayerCake_hpp */
