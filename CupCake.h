@@ -10,18 +10,22 @@
 #define CupCake_h
 
 #include "Cake.h"
+#include "BakedGood.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <iomanip>
+
 
 using namespace std;
 
 class CupCake : public Cake {
 public:
    CupCake();
-   CupCake(string bakedGoodType, string options, int quantity);
+   CupCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, string colorSprinkles, int quantity);
    virtual void ToString();
    virtual double DiscountedPrice(int totalGoods);
+   void addToPrice(double price);
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;

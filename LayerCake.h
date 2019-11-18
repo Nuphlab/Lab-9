@@ -23,6 +23,7 @@ public:
    LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity);
    virtual void ToString();
    virtual double DiscountedPrice(int totalGoods);
+   void addToPrice(int cakeLayers);
 private:
    string treatType;
    string flavorOfCake;

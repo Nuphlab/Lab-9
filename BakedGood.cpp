@@ -1,7 +1,7 @@
 #include "BakedGood.h"
 
 BakedGood::BakedGood() {
-  treatType = "";
+   treatType = "";
    treatOptions = "";
    itemQuantity = 0;
    basePrice = 4.50;

@@ -25,54 +25,65 @@ int main() {
    cout << "**Bread and Cakes Bakery**" << endl << endl;
    cout << "Enter sub-order (enter \"done\" to finish)" << endl;
    
-   string bakedGoodType = "";
-   while (bakedGoodType != "done") {
-      string options;
-      int quantity;
+   string userSelection = "";
+   while (userSelection != "done") {
+      string options = "";
+      int quantity = 0;
+      string bakedGoodType = "";
+
       cout << "Sub-order:" << endl;
       getline(cin, bakedGoodType);
-      if (bakedGoodType != "done") {
-         if (bakedGoodType == "Bread") {
-            getline(cin, options);
-            cin >> quantity;
-            cin.ignore();
-            for (int i = 0; i < quantity; ++i) {
-               Bread* newBread = new Bread(bakedGoodType, options, quantity);
-               theGoods.push_back(newBread);
-            }
-         }
-         else if (bakedGoodType == "Layer-cake") {
-            string cakeFlavor;
-            string frostingFlavor;
-            int layers;
+      userSelection = bakedGoodType;
 
-            getline(cin, cakeFlavor);
-            getline(cin, frostingFlavor);
-            cin >> layers;
-            cin.ignore();
-            cin >> quantity;
-            cin.ignore();
-            LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
-            theGoods.push_back(newLayerCake);
-         }
-         else if (bakedGoodType == "Cupcake") {
-            getline(cin, options);
-            cin >> quantity;
-            cin.ignore();
-            CupCake* newCupCake = new CupCake(bakedGoodType, options, quantity);
-            theGoods.push_back(newCupCake);
-         }
-         
-         cout << "Order Confirmations:" << endl;
-         for (int i = 0; i < theGoods.size(); ++i) {
-            theGoods.at(i)->ToString();
+      if (bakedGoodType == "Bread") {
+         getline(cin, options);
+         cin >> quantity;
+         cin.ignore();
+         for (int i = 0; i < quantity; ++i) {
+            Bread* newBread = new Bread(bakedGoodType, options, quantity);
+            theGoods.push_back(newBread);
          }
       }
-      //cout << "Sub-order:" << endl;
-      //getline(cin, bakedGoodType);
+      else if (bakedGoodType == "Layer-cake") {
+         string cakeFlavor;
+         string frostingFlavor;
+         int layers;
+
+         getline(cin, cakeFlavor);
+         getline(cin, frostingFlavor);
+         cin >> layers;
+         cin.ignore();
+         cin >> quantity;
+         cin.ignore();
+         for (int i = 0; i < quantity; ++i) {
+            LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
+            newLayerCake->addToPrice(layers);
+            theGoods.push_back(newLayerCake);
+         }
+      }
+      else if (bakedGoodType == "Cupcake") {
+         string flavorCake;
+         getline(cin, flavorCake);
+         string frostingFlavor;
+         getline(cin, frostingFlavor);
+         string colorSprinkles;
+         getline(cin, colorSprinkles);
+         cin >> quantity;
+         cin.ignore();
+         for (int i = 0; i < quantity; ++i) {
+            CupCake* newCupCake = new CupCake(bakedGoodType, flavorCake, frostingFlavor, colorSprinkles, quantity);
+            if (frostingFlavor == "cream-cheese") {
+               newCupCake->addToPrice(.20);
+            }
+            theGoods.push_back(newCupCake);
+         }
+         cout << theGoods.size() << endl;
+      }
    }
-
-   cout << "Good Bye";
-
-    return 0;
+   cout << "Order Confirmations:" << endl;
+   for (int i = 0; i < theGoods.size(); ++i) {
+      theGoods.at(i)->ToString();
+   }
+ 
+   return 0;
 }
