@@ -83,6 +83,11 @@ int main() {
    for (int i = 0; i < theGoods.size(); ++i) {
       theGoods.at(i)->ToString();
    }
+
+   cout << "Invoice:" << endl;
+   cout << "Baked Good" << endl;
+   cout << "Total" << endl;
+
  
    return 0;
 }

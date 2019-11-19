@@ -10,14 +10,17 @@
 
 Bread::Bread() {
 }
-Bread::Bread(string bakedGoodType, string options, int quantity) {
+Bread::Bread(string bakedGoodType, string breadOptions, int quantity) {
    breadType = bakedGoodType;
-   treatOptions = options;
+   treatOptions = breadOptions;
    itemQuantity = quantity;
 }
-void Bread::ToString() {
+string Bread::ToString() {
    //Returns a string containing the basic description and base price of the object.
-   cout << treatOptions << " " << breadType << " ($" << fixed << setprecision(6) << basePrice << ")" << endl;
+   string newString;
+   newString = treatOptions + " " + breadType + " ($" + to_string(basePrice) + ")/n";
+   return newString;
+   //cout << treatOptions << " " << breadType << " ($" << fixed << setprecision(6) << basePrice << ")" << endl;
 }
 double Bread::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/

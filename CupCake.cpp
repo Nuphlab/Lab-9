@@ -21,9 +21,12 @@ CupCake::CupCake(string bakedGoodType, string flavorCake, string frostingFlavor,
 void CupCake::addToPrice(double price) {
    basePrice += price;
 }
-void CupCake::ToString() {
+string CupCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
-   cout << cakeFlavor << " " << cakeType << " with " << frosting << " frosting and " << sprinklesColor << " sprinkles ($" << fixed << setprecision(6) << basePrice << ")" << endl;
+   //cout << cakeFlavor << " " << cakeType << " with " << frosting << " frosting and " << sprinklesColor << " sprinkles ($" << fixed << setprecision(6) << basePrice << ")" << endl;
+   string newString;
+   newString = cakeFlavor + " " + cakeType + " with " + frosting + " frosting and " + sprinklesColor + " sprinkles ($" + to_string(basePrice) + ")/n";
+   return newString;
 }
 double CupCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/

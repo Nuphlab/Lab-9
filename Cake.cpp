@@ -9,6 +9,5 @@
 #include "Cake.h"
 
 Cake::Cake() {
-   cakeType = treatType;
    cakeFlavor = treatOptions;
 }

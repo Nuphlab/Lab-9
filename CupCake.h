@@ -23,13 +23,14 @@ class CupCake : public Cake {
 public:
    CupCake();
    CupCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, string colorSprinkles, int quantity);
-   virtual void ToString();
+   virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(double price);
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;
 private:
+   string cakeType;
    string flavor;
    string frosting;
    string sprinklesColor;

@@ -1,17 +1,16 @@
 #include "BakedGood.h"
 
 BakedGood::BakedGood() {
-   treatType = "";
    treatOptions = "";
    itemQuantity = 0;
    basePrice = 4.50;
 }
-BakedGood::BakedGood(string bakedGoodType, string options, int quantity) {
-   treatType = bakedGoodType;
+BakedGood::BakedGood(string options, int quantity) {
    treatOptions = options;
    itemQuantity = quantity;
-   basePrice = 4.50;
+   basePrice = 4.500000;
 }
-void BakedGood::ToString() {
-   cout << basePrice;
+string BakedGood::ToString() {
+   string newString = to_string(basePrice);
+   return newString;
 }

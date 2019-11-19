@@ -21,7 +21,7 @@ class LayerCake : public Cake {
 public:
    LayerCake();
    LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity);
-   virtual void ToString();
+   virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
 private:
