@@ -27,6 +27,9 @@ void LayerCake::addToPrice(int cakeLayers) {
       basePrice += 3 * (cakeLayers - 1);
       basePrice += cakeLayers;
    }
+   else if (cakeLayers > 1) {
+      basePrice += 3 * (cakeLayers - 1);
+   }
 }
 void LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.

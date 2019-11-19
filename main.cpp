@@ -32,11 +32,11 @@ int main() {
       string bakedGoodType = "";
 
       cout << "Sub-order:" << endl;
-      getline(cin, bakedGoodType);
+      cin >> bakedGoodType;
       userSelection = bakedGoodType;
 
       if (bakedGoodType == "Bread") {
-         getline(cin, options);
+         cin >> options;
          cin >> quantity;
          cin.ignore();
          for (int i = 0; i < quantity; ++i) {
@@ -49,8 +49,8 @@ int main() {
          string frostingFlavor;
          int layers;
 
-         getline(cin, cakeFlavor);
-         getline(cin, frostingFlavor);
+         cin >> cakeFlavor;
+         cin >> frostingFlavor;
          cin >> layers;
          cin.ignore();
          cin >> quantity;
@@ -63,11 +63,11 @@ int main() {
       }
       else if (bakedGoodType == "Cupcake") {
          string flavorCake;
-         getline(cin, flavorCake);
+         cin >> flavorCake;
          string frostingFlavor;
-         getline(cin, frostingFlavor);
+         cin >> frostingFlavor;
          string colorSprinkles;
-         getline(cin, colorSprinkles);
+         cin >> colorSprinkles;
          cin >> quantity;
          cin.ignore();
          for (int i = 0; i < quantity; ++i) {
@@ -77,7 +77,6 @@ int main() {
             }
             theGoods.push_back(newCupCake);
          }
-         cout << theGoods.size() << endl;
       }
    }
    cout << "Order Confirmations:" << endl;
