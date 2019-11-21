@@ -11,12 +11,13 @@ using namespace std;
 
 class Bread : public BakedGood {
 public:
-   Bread();
-   Bread(string bakedGoodType, string breadOptions, int quantity);
+   Bread(string bakedGood = "none", string breadOptions = "none", int itemQuantity = 0);
    virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
 protected:
    string breadType;
+   int quantity;
+   double basePrice;
 
 };
 #endif /* Bread_hpp */

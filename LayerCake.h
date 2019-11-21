@@ -19,8 +19,7 @@ using namespace std;
 
 class LayerCake : public Cake {
 public:
-   LayerCake();
-   LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity);
+   LayerCake(string bakedGoodType = "none", string cakeFlavor = "none", string frostingFlavor = "none", int layers = 0, int quantity = 0);
    virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);

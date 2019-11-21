@@ -7,10 +7,8 @@
 //
 
 #include "LayerCake.h"
-LayerCake::LayerCake() {
-   basePrice = 9.00;
-}
-LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) {
+LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
+BakedGood(bakedGoodType){
    treatType = bakedGoodType;
    flavorOfCake = cakeFlavor;
    flavorOfFrosting = frostingFlavor;

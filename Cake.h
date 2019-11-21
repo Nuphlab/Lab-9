@@ -21,7 +21,8 @@ public:
    Cake();
    virtual string ToString() = 0;
 protected:
-   string cakeFlavor;
+   double layerCakeBasePrice;
+   double cupCakeBasePrice;
    
 };
 

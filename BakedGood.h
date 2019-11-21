@@ -17,16 +17,13 @@ using namespace std;
 
 class BakedGood {
 public:
-   BakedGood();
-   BakedGood(string options, int quantity);
-   //BakedGood(string bakedGoodType, string options, int quantity);
+   BakedGood(string goodType = "none");
    virtual string ToString() = 0;
 protected:
-   string treatOptions;
-   int itemQuantity;
-   double basePrice;
+   string bakedGood;
 };
 
 #endif 
+
 
 
