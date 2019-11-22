@@ -19,22 +19,22 @@
 
 using namespace std;
 
+const double BASE_CUPCAKE_PRICE = 1.95;
+
 class CupCake : public Cake {
 public:
    CupCake();
-   CupCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, string colorSprinkles, int quantity);
+   CupCake(string bakedGoodType = "", string cakeFlavor = "", string frostingFlavor = "", string colorSprinkles = "", int quantity = 0);
    virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(double price);
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;
-private:
    string cakeType;
-   string flavor;
    string frosting;
    string sprinklesColor;
-   double basePrice;
+   int itemQuantity;
 };
 
 #endif /* CupCake_hpp */

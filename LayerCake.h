@@ -17,13 +17,15 @@
 
 using namespace std;
 
+const double BASE_LAYERCAKE_PRICE = 9.00;
+
 class LayerCake : public Cake {
 public:
    LayerCake(string bakedGoodType = "none", string cakeFlavor = "none", string frostingFlavor = "none", int layers = 0, int quantity = 0);
    virtual string ToString();
-   virtual double DiscountedPrice(int totalGoods);
+   double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
-private:
+protected:
    string treatType;
    string flavorOfCake;
    string flavorOfFrosting;

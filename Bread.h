@@ -7,7 +7,10 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+
 using namespace std;
+
+const double BASE_BREAD_PRICE = 4.50;
 
 class Bread : public BakedGood {
 public:

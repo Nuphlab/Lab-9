@@ -40,8 +40,8 @@ int main() {
          cin >> quantity;
          cin.ignore();
          for (int i = 0; i < quantity; ++i) {
-            Bread* newBread = new Bread(bakedGoodType, options, quantity);
-            theGoods.push_back(newBread);
+            //Bread* newBread = new Bread(bakedGoodType, options, quantity);
+            //theGoods.push_back(newBread);
          }
       }
       else if (bakedGoodType == "Layer-cake") {
@@ -56,9 +56,9 @@ int main() {
          cin >> quantity;
          cin.ignore();
          for (int i = 0; i < quantity; ++i) {
-            LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
-            newLayerCake->addToPrice(layers);
-            theGoods.push_back(newLayerCake);
+           // LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
+           // newLayerCake->addToPrice(layers);
+           // theGoods.push_back(newLayerCake);
          }
       }
       else if (bakedGoodType == "Cupcake") {
@@ -71,11 +71,11 @@ int main() {
          cin >> quantity;
          cin.ignore();
          for (int i = 0; i < quantity; ++i) {
-            CupCake* newCupCake = new CupCake(bakedGoodType, flavorCake, frostingFlavor, colorSprinkles, quantity);
+            /*CupCake* newCupCake = new CupCake(bakedGoodType, flavorCake, frostingFlavor, colorSprinkles, quantity);
             if (frostingFlavor == "cream-cheese") {
                newCupCake->addToPrice(.20);
             }
-            theGoods.push_back(newCupCake);
+            theGoods.push_back(newCupCake); */
          }
       }
    }

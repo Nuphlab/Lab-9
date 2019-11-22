@@ -9,6 +9,5 @@
 #include "Cake.h"
 
 Cake::Cake() {
-   layerCakeBasePrice = 9.00;
-   cupCakeBasePrice = 1.95;
+
 }

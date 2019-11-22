@@ -20,10 +20,11 @@ class Cake : public BakedGood {
 public:
    Cake();
    virtual string ToString() = 0;
+   double DiscountedPrice;
 protected:
-   double layerCakeBasePrice;
-   double cupCakeBasePrice;
-   
+   double basePrice;
+   string cakeFlavor;
+   string frostingFlavor;
 };
 
 #endif /* Cake_hpp */
