@@ -9,18 +9,17 @@
 #include "Bread.h"
 
 Bread::Bread(string bakedGood, string breadOptions, int itemQuantity) {
+   bakedGoodType = bakedGood;
    breadType = breadOptions;
    quantity = itemQuantity;
-   basePrice = 4.50;
 }
 string Bread::ToString() {
    //Returns a string containing the basic description and base price of the object.
    string newString;
-   newString = /*bakedGood + */" " + breadType + " ($" + to_string(basePrice) + ")/n";
+   newString = breadType + " " + bakedGoodType + " ($" + to_string(basePrice) + ")\n";
    return newString;
-   //cout << treatOptions << " " << breadType << " ($" << fixed << setprecision(6) << basePrice << ")" << endl;
 }
-double Bread::DiscountedPrice(int totalGoods) {
+double Bread::DiscountedPrice() {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
    return 0;
 }

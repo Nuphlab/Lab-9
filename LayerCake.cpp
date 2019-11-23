@@ -7,20 +7,19 @@
 //
 
 #include "LayerCake.h"
-LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) {
+LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
+Cake(cakeFlavor, frostingFlavor) {
    treatType = bakedGoodType;
-   flavorOfCake = cakeFlavor;
-   flavorOfFrosting = frostingFlavor;
    cakeLayers = layers;
-   cakeQuantity = quantity ;
-   basePrice = 9.00;
+   cakeQuantity = quantity;
+   basePrice = BASE_LAYERCAKE_PRICE;
 }
 void LayerCake::addToPrice(int cakeLayers) {
-   if (cakeLayers == 1 && flavorOfFrosting == "cream-cheese") {
+   if (cakeLayers == 1 && Cake::frostingFlavor == "cream-cheese") {
       basePrice += 1;
       basePrice += cakeLayers;
    }
-   else if (cakeLayers > 1 && flavorOfFrosting == "cream-cheese") {
+   else if (cakeLayers > 1 && Cake::frostingFlavor == "cream-cheese") {
       basePrice += 3 * (cakeLayers - 1);
       basePrice += cakeLayers;
    }
@@ -32,7 +31,7 @@ string LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
    //cout << cakeLayers << "-layer " << flavorOfCake << " cake with " << flavorOfFrosting << " frosting ($" << fixed << setprecision(6) << basePrice << ")" << endl;
    string newString;
-   newString = to_string(cakeLayers) + " -layer" + flavorOfCake + " cake with " + flavorOfFrosting + " frosting ($" + to_string(basePrice) + ")/n";
+   newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting ($" + to_string(basePrice) + ")\n";
    return newString;
 }
 double LayerCake::DiscountedPrice(int totalGoods) {

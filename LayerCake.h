@@ -27,8 +27,6 @@ public:
    void addToPrice(int cakeLayers);
 protected:
    string treatType;
-   string flavorOfCake;
-   string flavorOfFrosting;
    int cakeLayers;
    double basePrice;
    int cakeQuantity;

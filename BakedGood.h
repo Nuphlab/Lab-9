@@ -15,9 +15,11 @@
 
 using namespace std;
 
+const double BASE_BREAD_PRICE = 4.50;
+
 class BakedGood {
 public:
-   BakedGood(double price = 0.00);
+   BakedGood();
    virtual string ToString() = 0;
    virtual double DiscountedPrice() = 0;
 protected:

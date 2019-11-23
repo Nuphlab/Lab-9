@@ -18,9 +18,9 @@ using namespace std;
 
 class Cake : public BakedGood {
 public:
-   Cake();
+   Cake(string flavorOfCake = "none", string flavorOfFrosting = "none");
    virtual string ToString() = 0;
-   double DiscountedPrice;
+   double DiscountedPrice();
 protected:
    double basePrice;
    string cakeFlavor;

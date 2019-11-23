@@ -10,17 +10,15 @@
 
 using namespace std;
 
-const double BASE_BREAD_PRICE = 4.50;
-
 class Bread : public BakedGood {
 public:
    Bread(string bakedGood = "none", string breadOptions = "none", int itemQuantity = 0);
    virtual string ToString();
-   virtual double DiscountedPrice(int totalGoods);
+   virtual double DiscountedPrice();
 protected:
+   string bakedGoodType;
    string breadType;
    int quantity;
-   double basePrice;
 
 };
 #endif /* Bread_hpp */

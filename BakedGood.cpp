@@ -1,5 +1,5 @@
 #include "BakedGood.h"
 
-BakedGood::BakedGood(double price) {
-	basePrice = price;
+BakedGood::BakedGood() {
+	basePrice = BASE_BREAD_PRICE;
 } 
