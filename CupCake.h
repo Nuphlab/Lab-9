@@ -28,6 +28,7 @@ public:
    virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(double price);
+   int GetQuantity();
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;

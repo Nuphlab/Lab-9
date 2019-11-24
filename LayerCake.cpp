@@ -31,10 +31,22 @@ string LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
    //cout << cakeLayers << "-layer " << flavorOfCake << " cake with " << flavorOfFrosting << " frosting ($" << fixed << setprecision(6) << basePrice << ")" << endl;
    string newString;
-   newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting ($" + to_string(basePrice) + ")\n";
+   newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting ($" + to_string(basePrice) + ")";
    return newString;
 }
 double LayerCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
-   return 0;
+	double total = 0;
+	int discountRate;
+	if (cakeQuantity >= 3) {
+		discountRate = 2;
+	}
+	else {
+		discountRate = 0;
+	}
+	total = (cakeQuantity * basePrice) - (discountRate * cakeQuantity);
+	return total;
+}
+int LayerCake::GetQuantity() {
+	return cakeQuantity;
 }

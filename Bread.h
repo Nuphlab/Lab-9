@@ -14,7 +14,8 @@ class Bread : public BakedGood {
 public:
    Bread(string bakedGood = "none", string breadOptions = "none", int itemQuantity = 0);
    virtual string ToString();
-   virtual double DiscountedPrice();
+   virtual double DiscountedPrice(int numItems);
+   int GetQuantity();
 protected:
    string bakedGoodType;
    string breadType;

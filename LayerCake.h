@@ -25,6 +25,7 @@ public:
    virtual string ToString();
    double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
+   int GetQuantity();
 protected:
    string treatType;
    int cakeLayers;
