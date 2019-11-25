@@ -8,7 +8,7 @@
 
 #include "LayerCake.h"
 LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
-Cake(cakeFlavor, frostingFlavor) {
+   Cake(cakeFlavor, frostingFlavor) {
    treatType = bakedGoodType;
    cakeLayers = layers;
    cakeQuantity = quantity;
@@ -36,17 +36,17 @@ string LayerCake::ToString() {
 }
 double LayerCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
-	double total = 0;
-	int discountRate;
-	if (cakeQuantity >= 3) {
-		discountRate = 2;
-	}
-	else {
-		discountRate = 0;
-	}
-	total = (cakeQuantity * basePrice) - (discountRate * cakeQuantity);
-	return total;
+   double total = 0;
+   int discountRate;
+   if (cakeQuantity >= 3) {
+      discountRate = 2;
+   }
+   else {
+      discountRate = 0;
+   }
+   total = (cakeQuantity * basePrice) - (discountRate * cakeQuantity);
+   return total;
 }
 int LayerCake::GetQuantity() {
-	return cakeQuantity;
+   return cakeQuantity;
 }
