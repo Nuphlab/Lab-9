@@ -85,21 +85,40 @@ int main() {
    cout << "Total" << endl;
 
    vector<BakedGood*> invoiceVector;
+   vector<BakedGood*> invoiceVector2;
+   vector<BakedGood*> tempVec;
+   vector<BakedGood*> tempObj;
    invoiceVector = theGoods;
+   invoiceVector2 = theGoods;
    double totalPrice = 0.00;
    int totalItems = 0;
 
+
    for (int i = 0; i < invoiceVector.size(); ++i) {
-      for (int j = 1; j < invoiceVector.size(); ++j) {
-         if (invoiceVector.at(i)->ToString() == invoiceVector.at(j)->ToString()) {
-            //delete invoiceVector.at(j);
-            invoiceVector.erase(invoiceVector.begin() + j);
-            j = 1;
-         } 
+      //int count = 0;
+      i = 0;
+      for (int j = 0; j < invoiceVector2.size(); ++j) {
+         if (invoiceVector.at(i)->ToString() == invoiceVector2.at(j)->ToString()) {
+            invoiceVector2.erase(invoiceVector2.begin() + j);
+            j = 0;
+            --j;
+         }
       }
+
+      tempObj.push_back(invoiceVector.at(i));
+
+      for (int i = 0; i < invoiceVector.size(); ++i) {
+         if (tempObj.at(0)->ToString() == invoiceVector.at(i)->ToString()) {
+            invoiceVector.erase(invoiceVector.begin() + i);
+            i = 0;
+            --i;
+         }
+      }
+      tempVec.push_back(tempObj.at(0));
+      tempObj.clear();
    }
 
-   cout << invoiceVector.size() << endl;
+   invoiceVector = tempVec;
 
    for (int i = 0; i < invoiceVector.size(); ++i) {
       cout << invoiceVector.at(i)->ToString() << setw(52) << invoiceVector.at(i)->GetQuantity() << endl;
