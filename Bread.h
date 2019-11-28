@@ -16,10 +16,11 @@ public:
    virtual string ToString();
    virtual double DiscountedPrice(int numItems);
    int GetQuantity();
+   int GetTotalQuantity();
 protected:
    string bakedGoodType;
    string breadType;
    int quantity;
-
+   int totalBreadQuantity;
 };
 #endif /* Bread_hpp */

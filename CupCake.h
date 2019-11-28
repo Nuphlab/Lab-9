@@ -29,6 +29,7 @@ public:
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(double price);
    int GetQuantity();
+   int GetTotalQuantity();
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;
@@ -36,6 +37,7 @@ protected:
    string frosting;
    string sprinklesColor;
    int itemQuantity;
+   int totalCupCakeQuantity;
 };
 
 #endif /* CupCake_hpp */

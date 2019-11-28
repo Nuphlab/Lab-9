@@ -81,30 +81,32 @@ int main() {
    }
 
    cout << "Invoice:" << endl;
-   cout << "Baked Good" << setw(65) << "Quantity" << endl;
-   cout << "Total" << endl;
+   cout << "Baked Good" << setw(65) << "Quantity" << setw(5) << "Total" << endl;
 
    vector<BakedGood*> invoiceVector;
    vector<BakedGood*> invoiceVector2;
    vector<BakedGood*> tempVec;
    vector<BakedGood*> tempObj;
+   vector<int> numItems;
    invoiceVector = theGoods;
    invoiceVector2 = theGoods;
    double totalPrice = 0.00;
    int totalItems = 0;
 
-
+   
    for (int i = 0; i < invoiceVector.size(); ++i) {
-      //int count = 0;
+      int items = 0;
       i = 0;
       for (int j = 0; j < invoiceVector2.size(); ++j) {
          if (invoiceVector.at(i)->ToString() == invoiceVector2.at(j)->ToString()) {
             invoiceVector2.erase(invoiceVector2.begin() + j);
+            ++items;
             j = 0;
             --j;
          }
       }
 
+      numItems.push_back(items);
       tempObj.push_back(invoiceVector.at(i));
 
       for (int i = 0; i < invoiceVector.size(); ++i) {
@@ -121,16 +123,16 @@ int main() {
    invoiceVector = tempVec;
 
    for (int i = 0; i < invoiceVector.size(); ++i) {
-      cout << invoiceVector.at(i)->ToString() << setw(52) << invoiceVector.at(i)->GetQuantity() << endl;
+      cout << invoiceVector.at(i)->ToString() << setw(65) << numItems.at(i) /*invoiceVector.at(i)->GetTotalQuantity()*/ << "    " << fixed << setprecision(2) << invoiceVector.at(i)->DiscountedPrice(numItems.at(i)) << endl;
       //cout << fixed << setprecision(2) << invoiceVector.at(i)->DiscountedPrice(invoiceVector.at(i)->GetQuantity()) << endl;
-      //totalPrice += invoiceVector.at(i)->DiscountedPrice(invoiceVector.at(i)->GetQuantity());
+      totalPrice += invoiceVector.at(i)->DiscountedPrice(numItems.at(i));
       totalItems += invoiceVector.at(i)->GetQuantity();
    }
 
-   cout << "Totals" << setw(65) << totalItems << endl;
+   cout << "Totals" << setw(65) << totalItems << "   " << totalPrice << endl;
    //cout << totalPrice << endl;
    cout << "Good Bye";
 
-   system("pause");
+   //system("pause");
    return 0;
 }

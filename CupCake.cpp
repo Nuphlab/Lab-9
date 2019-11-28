@@ -17,6 +17,7 @@ CupCake::CupCake(string bakedGoodType, string flavorCake, string frostingFlavor,
    sprinklesColor = colorSprinkles;
    itemQuantity = quantity;
    basePrice = BASE_CUPCAKE_PRICE;
+   totalCupCakeQuantity += quantity;
 }
 void CupCake::addToPrice(double price) {
    basePrice += price;
@@ -30,7 +31,7 @@ string CupCake::ToString() {
 double CupCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
    double total = 0;
-   double discountRate;
+   double discountRate = 0;
    if (itemQuantity >= 4) {
       discountRate = .40;
    }
@@ -43,4 +44,8 @@ double CupCake::DiscountedPrice(int totalGoods) {
 }
 int CupCake::GetQuantity() {
    return itemQuantity;
+}
+
+int CupCake::GetTotalQuantity() {
+   return totalCupCakeQuantity;
 }

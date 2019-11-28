@@ -26,11 +26,13 @@ public:
    double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
    int GetQuantity();
+   int GetTotalQuantity();
 protected:
    string treatType;
    int cakeLayers;
    double basePrice;
    int cakeQuantity;
+   int totalLayerCakeQuantity;
 };
 
 #endif /* LayerCake_hpp */

@@ -8,10 +8,12 @@
 
 #include "Bread.h"
 
+
 Bread::Bread(string bakedGood, string breadOptions, int itemQuantity) {
    bakedGoodType = bakedGood;
    breadType = breadOptions;
    quantity = itemQuantity;
+   totalBreadQuantity += itemQuantity;
 }
 string Bread::ToString() {
    //Returns a string containing the basic description and base price of the object.
@@ -27,4 +29,7 @@ double Bread::DiscountedPrice(int numItems) {
 }
 int Bread::GetQuantity() {
    return quantity;
+}
+int Bread::GetTotalQuantity() {
+   return totalBreadQuantity;
 }
