@@ -1,13 +1,4 @@
-//
-//  Bread.cpp
-//  Lab 9
-//
-//  Created by Westley Holden on 11/10/19.
-//  Copyright © 2019 Westley Holden. All rights reserved.
-//
-
 #include "Bread.h"
-
 
 Bread::Bread(string bakedGood, string breadOptions, int itemQuantity) {
    bakedGoodType = bakedGood;
@@ -24,7 +15,7 @@ string Bread::ToString() {
 double Bread::DiscountedPrice(int numItems) {
    //Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.
    double total = 0;
-   total = (numItems * basePrice) - (numItems / 4 * basePrice);
+   total = (numItems * basePrice) - (numItems / 3 * basePrice);
    return total;
 }
 int Bread::GetQuantity() {

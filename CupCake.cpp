@@ -1,11 +1,3 @@
-//
-//  CupCake.cpp
-//  Lab 9
-//
-//  Created by Westley Holden on 11/10/19.
-//  Copyright © 2019 Westley Holden. All rights reserved.
-//
-
 #include "CupCake.h"
 
 CupCake::CupCake() {
@@ -30,16 +22,16 @@ string CupCake::ToString() {
 }
 double CupCake::DiscountedPrice(int totalGoods) {
    /*Takes as parameter the total number of a particular baked good and returns the discounted total price for that baked good.*/
-   double total = 0;
-   double discountRate = 0;
-   if (itemQuantity >= 4) {
+   double total = 0.0;
+   double discountRate = 0.00;
+   if (totalGoods >= 4) {
       discountRate = .40;
    }
-   else if (itemQuantity >= 2 && itemQuantity < 4) {
+   else if (totalGoods >= 2 && totalGoods < 4) {
       discountRate = .30;
    }
 
-   total = (itemQuantity * basePrice) - (itemQuantity * discountRate);
+   total = (totalGoods * basePrice) - (totalGoods * discountRate);
    return total;
 }
 int CupCake::GetQuantity() {

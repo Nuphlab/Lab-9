@@ -1,11 +1,3 @@
-//
-//  main.cpp
-//  Lab 9
-//
-//  Created by Westley Holden on 11/10/19.
-//  Copyright © 2019 Westley Holden. All rights reserved.
-//
-
 #include "BakedGood.h"
 #include "Bread.h"
 #include "LayerCake.h"
@@ -123,14 +115,12 @@ int main() {
    invoiceVector = tempVec;
 
    for (int i = 0; i < invoiceVector.size(); ++i) {
-      cout << invoiceVector.at(i)->ToString() << setw(65) << numItems.at(i) /*invoiceVector.at(i)->GetTotalQuantity()*/ << "    " << fixed << setprecision(2) << invoiceVector.at(i)->DiscountedPrice(numItems.at(i)) << endl;
-      //cout << fixed << setprecision(2) << invoiceVector.at(i)->DiscountedPrice(invoiceVector.at(i)->GetQuantity()) << endl;
+      cout << invoiceVector.at(i)->ToString() << setw(65) << numItems.at(i) << "    " << fixed << setprecision(2) << invoiceVector.at(i)->DiscountedPrice(numItems.at(i)) << endl;
       totalPrice += invoiceVector.at(i)->DiscountedPrice(numItems.at(i));
-      totalItems += invoiceVector.at(i)->GetQuantity();
+      totalItems += numItems.at(i);
    }
 
    cout << "Totals" << setw(65) << totalItems << "   " << totalPrice << endl;
-   //cout << totalPrice << endl;
    cout << "Good Bye";
 
    //system("pause");

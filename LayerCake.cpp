@@ -1,11 +1,3 @@
-//
-//  LayerCake.cpp
-//  Lab 9
-//
-//  Created by Westley Holden on 11/10/19.
-//  Copyright © 2019 Westley Holden. All rights reserved.
-//
-
 #include "LayerCake.h"
 
 LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
@@ -31,7 +23,6 @@ void LayerCake::addToPrice(int cakeLayers) {
 }
 string LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
-   //cout << cakeLayers << "-layer " << flavorOfCake << " cake with " << flavorOfFrosting << " frosting ($" << fixed << setprecision(6) << basePrice << ")" << endl;
    string newString;
    newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting ($" + to_string(basePrice) + ")";
    return newString;
