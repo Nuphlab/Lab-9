@@ -8,6 +8,8 @@ LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFla
    basePrice = BASE_LAYERCAKE_PRICE;
    totalLayerCakeQuantity += quantity;
 }
+LayerCake::~LayerCake() {
+}
 void LayerCake::addToPrice(int cakeLayers) {
    if (cakeLayers == 1 && Cake::frostingFlavor == "cream-cheese") {
       basePrice += 1;

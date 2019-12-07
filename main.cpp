@@ -123,6 +123,27 @@ int main() {
    cout << "Totals" << setw(65) << totalItems << "   " << totalPrice << endl;
    cout << "Good Bye";
 
+   /*for (int i = 0; i < invoiceVector.size(); ++i) {
+      delete invoiceVector.at(i);
+      invoiceVector.erase(invoiceVector.begin() + i);
+      --i;
+   }
+   for (int i = 0; i < invoiceVector2.size(); ++i) {
+      delete invoiceVector2.at(i);
+      invoiceVector2.erase(invoiceVector2.begin() + i);
+      --i;
+   }
+   for (int i = 0; i < tempVec.size(); ++i) {
+      delete tempVec.at(i);
+      tempVec.erase(tempVec.begin() + i);
+      --i;
+   }
+   for (int i = 0; i < tempObj.size(); ++i) {
+      delete tempObj.at(i);
+      tempObj.erase(tempObj.begin() + i);
+      --i;
+   }*/
+
    //system("pause");
    return 0;
 }

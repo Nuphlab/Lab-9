@@ -7,12 +7,11 @@
 
 using namespace std;
 
-const double BASE_BREAD_PRICE = 4.50;
-
 class BakedGood {
 public:
-   BakedGood();
-   virtual string ToString() = 0;
+   BakedGood(double price = 0);
+   ~BakedGood();
+   virtual string ToString();
    virtual double DiscountedPrice(int numItems) = 0;
    virtual int GetQuantity() = 0;
    virtual int GetTotalQuantity() = 0;
