@@ -8,8 +8,6 @@ LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFla
    basePrice = BASE_LAYERCAKE_PRICE;
    totalLayerCakeQuantity += quantity;
 }
-LayerCake::~LayerCake() {
-}
 void LayerCake::addToPrice(int cakeLayers) {
    if (cakeLayers == 1 && Cake::frostingFlavor == "cream-cheese") {
       basePrice += 1;
@@ -26,7 +24,7 @@ void LayerCake::addToPrice(int cakeLayers) {
 string LayerCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
    string newString;
-   newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting ($" + to_string(basePrice) + ")";
+   newString = to_string(cakeLayers) + "-layer " + Cake::cakeFlavor + " cake with " + Cake::frostingFlavor + " frosting " + BakedGood::ToString(); //($" + to_string(basePrice) + ")";
    return newString;
 }
 double LayerCake::DiscountedPrice(int totalGoods) {

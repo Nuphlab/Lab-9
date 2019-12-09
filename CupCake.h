@@ -17,7 +17,6 @@ class CupCake : public Cake {
 public:
    CupCake();
    CupCake(string bakedGoodType = "", string cakeFlavor = "", string frostingFlavor = "", string colorSprinkles = "", int quantity = 0);
-   ~CupCake();
    virtual string ToString();
    virtual double DiscountedPrice(int totalGoods);
    void addToPrice(double price);

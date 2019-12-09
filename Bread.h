@@ -15,7 +15,6 @@ const double BREAD_BASE_PRICE = 4.50;
 class Bread : public BakedGood {
 public:
    Bread(string bakedGood = "none", string breadOptions = "none", int itemQuantity = 0);
-   ~Bread();
    virtual string ToString();
    virtual double DiscountedPrice(int numItems);
    int GetQuantity();

@@ -14,7 +14,6 @@ const double BASE_LAYERCAKE_PRICE = 9.00;
 class LayerCake : public Cake {
 public:
    LayerCake(string bakedGoodType = "none", string cakeFlavor = "none", string frostingFlavor = "none", int layers = 0, int quantity = 0);
-   ~LayerCake();
    virtual string ToString();
    double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
@@ -23,7 +22,7 @@ public:
 protected:
    string treatType;
    int cakeLayers;
-   double basePrice;
+   double basePriceLayerCake;
    int cakeQuantity;
    int totalLayerCakeQuantity;
 };

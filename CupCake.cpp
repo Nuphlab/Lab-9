@@ -11,15 +11,13 @@ CupCake::CupCake(string bakedGoodType, string flavorCake, string frostingFlavor,
    basePrice = BASE_CUPCAKE_PRICE;
    totalCupCakeQuantity += quantity;
 }
-CupCake::~CupCake() {
-}
 void CupCake::addToPrice(double price) {
    basePrice += price;
 }
 string CupCake::ToString() {
    //Returns a string containing the basic description and base price of the object.
    string newString;
-   newString = Cake::cakeFlavor + " " + "cupcake" + " with " + Cake::frostingFlavor + " frosting and " + sprinklesColor + " sprinkles ($" + to_string(basePrice) + ")";
+   newString = Cake::cakeFlavor + " " + "cupcake" + " with " + Cake::frostingFlavor + " frosting and " + sprinklesColor + " sprinkles " + BakedGood::ToString();//($" + to_string(basePrice) + ")";
    return newString;
 }
 double CupCake::DiscountedPrice(int totalGoods) {

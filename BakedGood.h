@@ -10,7 +10,6 @@ using namespace std;
 class BakedGood {
 public:
    BakedGood(double price = 0);
-   ~BakedGood();
    virtual string ToString();
    virtual double DiscountedPrice(int numItems) = 0;
    virtual int GetQuantity() = 0;

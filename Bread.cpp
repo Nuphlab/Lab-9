@@ -7,12 +7,10 @@ BakedGood(BREAD_BASE_PRICE) {
    quantity = itemQuantity;
    totalBreadQuantity += itemQuantity;
 }
-Bread::~Bread() {
-}
 string Bread::ToString() {
    //Returns a string containing the basic description and base price of the object.
    string newString;
-    newString = breadType + " " + "Bread" + BakedGood::ToString();
+   newString = breadType + " " + "Bread" + BakedGood::ToString();
    return newString;
 }
 double Bread::DiscountedPrice(int numItems) {
