@@ -16,19 +16,19 @@ const double BASE_CUPCAKE_PRICE = 1.95;
 class CupCake : public Cake {
 public:
    CupCake();
-   CupCake(string bakedGoodType = "", string cakeFlavor = "", string frostingFlavor = "", string colorSprinkles = "", int quantity = 0);
-   virtual string ToString();
-   virtual double DiscountedPrice(int totalGoods);
+   CupCake(string typeOfCake = "", string cakeFlavor = "", string frostingFlavor = "", string colorSprinkles = "", int quantity = 0);
+   string ToString();
+   double DiscountedPrice(int totalGoods);
    void addToPrice(double price);
    int GetQuantity();
    int GetTotalQuantity();
 protected:
    double totalDiscountedPrice;
    string basePriceDescription;
-   string cakeType;
+   //string cakeType;
    string frosting;
    string sprinklesColor;
-   int itemQuantity;
+   //int itemQuantity;
    int totalCupCakeQuantity;
 };
 

@@ -1,15 +1,9 @@
 #include "Cake.h"
 
-Cake::Cake(string flavorOfCake, string flavorOfFrosting) :
-BakedGood(basePriceCake) {
+Cake::Cake(string flavorOfCake, string flavorOfFrosting, double basePrice, string typeOfCake, int quantity) :
+   BakedGood(basePrice) {
    cakeFlavor = flavorOfCake;
    frostingFlavor = flavorOfFrosting;
+   cakeType = typeOfCake;
+   cakeQuantity = quantity;
 }
-/*string Cake::ToString() {
-   string newString;
-   return newString;
-}
-double Cake::DiscountedPrice() {
-   int newPrice = 0;
-   return newPrice;
-} */

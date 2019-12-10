@@ -76,22 +76,21 @@ int main() {
    cout << "Baked Good" << setw(65) << "Quantity" << setw(5) << "Total" << endl;
 
    vector<BakedGood*> invoiceVector;
-   vector<BakedGood*> invoiceVector2;
+   vector<BakedGood*> tempInvoiceVector;
    vector<BakedGood*> tempVec;
    vector<BakedGood*> tempObj;
    vector<int> numItems;
    invoiceVector = theGoods;
-   invoiceVector2 = theGoods;
+   tempInvoiceVector = theGoods;
    double totalPrice = 0.00;
    int totalItems = 0;
 
-   
    for (int i = 0; i < invoiceVector.size(); ++i) {
       int items = 0;
       i = 0;
-      for (int j = 0; j < invoiceVector2.size(); ++j) {
-         if (invoiceVector.at(i)->ToString() == invoiceVector2.at(j)->ToString()) {
-            invoiceVector2.erase(invoiceVector2.begin() + j);
+      for (int j = 0; j < tempInvoiceVector.size(); ++j) {
+         if (invoiceVector.at(i)->ToString() == tempInvoiceVector.at(j)->ToString()) {
+            tempInvoiceVector.erase(tempInvoiceVector.begin() + j);
             ++items;
             j = 0;
             --j;
@@ -122,27 +121,6 @@ int main() {
 
    cout << "Totals" << setw(65) << totalItems << "   " << totalPrice << endl;
    cout << "Good Bye";
-
-   /*for (int i = 0; i < invoiceVector.size(); ++i) {
-      delete invoiceVector.at(i);
-      invoiceVector.erase(invoiceVector.begin() + i);
-      --i;
-   }
-   for (int i = 0; i < invoiceVector2.size(); ++i) {
-      delete invoiceVector2.at(i);
-      invoiceVector2.erase(invoiceVector2.begin() + i);
-      --i;
-   }
-   for (int i = 0; i < tempVec.size(); ++i) {
-      delete tempVec.at(i);
-      tempVec.erase(tempVec.begin() + i);
-      --i;
-   }
-   for (int i = 0; i < tempObj.size(); ++i) {
-      delete tempObj.at(i);
-      tempObj.erase(tempObj.begin() + i);
-      --i;
-   }*/
 
    //system("pause");
    return 0;

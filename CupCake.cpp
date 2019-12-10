@@ -2,13 +2,11 @@
 
 CupCake::CupCake() {
 }
-CupCake::CupCake(string bakedGoodType, string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
-   Cake(flavorCake, frostingFlavor) {
-   cakeType = bakedGoodType;
-   itemQuantity = quantity;
+CupCake::CupCake(string typeOfCake, string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
+   Cake(flavorCake, frostingFlavor, BASE_CUPCAKE_PRICE, typeOfCake, quantity) {
+   //cakeType = bakedGoodType;
+   //itemQuantity = quantity;
    sprinklesColor = colorSprinkles;
-   itemQuantity = quantity;
-   basePrice = BASE_CUPCAKE_PRICE;
    totalCupCakeQuantity += quantity;
 }
 void CupCake::addToPrice(double price) {
@@ -35,7 +33,7 @@ double CupCake::DiscountedPrice(int totalGoods) {
    return total;
 }
 int CupCake::GetQuantity() {
-   return itemQuantity;
+   return cakeQuantity;
 }
 
 int CupCake::GetTotalQuantity() {

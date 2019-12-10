@@ -1,8 +1,8 @@
 #include "BakedGood.h"
 
 BakedGood::BakedGood(double price) {
-    basePrice = price;
+   basePrice = price;
 }
 string BakedGood::ToString() {
-    return "($" + to_string(basePrice) + ")";
+   return "($" + to_string(basePrice) + ")";
 }

@@ -1,11 +1,10 @@
 #include "LayerCake.h"
 
-LayerCake::LayerCake(string bakedGoodType, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
-   Cake(cakeFlavor, frostingFlavor) {
-   treatType = bakedGoodType;
+LayerCake::LayerCake(string typeOfCake, string cakeFlavor, string frostingFlavor, int layers, int quantity) :
+   Cake(cakeFlavor, frostingFlavor, BASE_LAYERCAKE_PRICE, typeOfCake, quantity) {
+   //cakeType = bakedGoodType;
    cakeLayers = layers;
-   cakeQuantity = quantity;
-   basePrice = BASE_LAYERCAKE_PRICE;
+   //cakeQuantity = quantity;
    totalLayerCakeQuantity += quantity;
 }
 void LayerCake::addToPrice(int cakeLayers) {
@@ -43,7 +42,6 @@ double LayerCake::DiscountedPrice(int totalGoods) {
 int LayerCake::GetQuantity() {
    return cakeQuantity;
 }
-
 int LayerCake::GetTotalQuantity() {
    return totalLayerCakeQuantity;
 }
