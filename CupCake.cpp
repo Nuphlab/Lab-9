@@ -1,7 +1,5 @@
 #include "CupCake.h"
 
-CupCake::CupCake() {
-}
 CupCake::CupCake(string typeOfCake, string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
    Cake(flavorCake, frostingFlavor, BASE_CUPCAKE_PRICE, typeOfCake, quantity) {
    //cakeType = bakedGoodType;
