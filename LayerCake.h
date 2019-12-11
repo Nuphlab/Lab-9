@@ -17,12 +17,9 @@ public:
    string ToString();
    double DiscountedPrice(int totalGoods);
    void addToPrice(int cakeLayers);
-   int GetQuantity();
-   int GetTotalQuantity();
 protected:
    int cakeLayers;
    double basePriceLayerCake;
-   int totalLayerCakeQuantity;
 };
 
 #endif

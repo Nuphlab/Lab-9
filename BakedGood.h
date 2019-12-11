@@ -12,8 +12,6 @@ public:
    BakedGood(double price = 0);
    virtual string ToString();
    virtual double DiscountedPrice(int numItems) = 0;
-   virtual int GetQuantity() = 0;
-   virtual int GetTotalQuantity() = 0;
 protected:
    double basePrice;
 };

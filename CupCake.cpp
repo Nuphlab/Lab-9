@@ -3,7 +3,6 @@
 CupCake::CupCake(string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
    Cake(flavorCake, frostingFlavor, BASE_CUPCAKE_PRICE, quantity) {
    sprinklesColor = colorSprinkles;
-   totalCupCakeQuantity += quantity;
 }
 void CupCake::addToPrice(double price) {
    basePrice += price;
@@ -27,10 +26,4 @@ double CupCake::DiscountedPrice(int totalGoods) {
 
    total = (totalGoods * basePrice) - (totalGoods * discountRate);
    return total;
-}
-int CupCake::GetQuantity() {
-   return cakeQuantity;
-}
-int CupCake::GetTotalQuantity() {
-   return totalCupCakeQuantity;
 }

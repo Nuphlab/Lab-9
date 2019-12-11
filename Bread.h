@@ -17,11 +17,8 @@ public:
    Bread(string breadOptions = "none", int itemQuantity = 0);
    string ToString();
    double DiscountedPrice(int numItems);
-   int GetQuantity();
-   int GetTotalQuantity();
 protected:
    string breadType;
    int quantity;
-   int totalBreadQuantity;
 };
 #endif 

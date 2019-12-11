@@ -3,7 +3,6 @@
 LayerCake::LayerCake(string cakeFlavor, string frostingFlavor, int layers, int quantity) :
    Cake(cakeFlavor, frostingFlavor, BASE_LAYERCAKE_PRICE, quantity) {
    cakeLayers = layers;
-   totalLayerCakeQuantity += quantity;
 }
 void LayerCake::addToPrice(int cakeLayers) {
    if (cakeLayers == 1 && Cake::frostingFlavor == "cream-cheese") {
@@ -36,10 +35,4 @@ double LayerCake::DiscountedPrice(int totalGoods) {
    }
    total = (cakeQuantity * basePrice) - (discountRate * cakeQuantity);
    return total;
-}
-int LayerCake::GetQuantity() {
-   return cakeQuantity;
-}
-int LayerCake::GetTotalQuantity() {
-   return totalLayerCakeQuantity;
 }
