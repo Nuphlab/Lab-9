@@ -1,9 +1,7 @@
 #include "CupCake.h"
 
-CupCake::CupCake(string typeOfCake, string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
-   Cake(flavorCake, frostingFlavor, BASE_CUPCAKE_PRICE, typeOfCake, quantity) {
-   //cakeType = bakedGoodType;
-   //itemQuantity = quantity;
+CupCake::CupCake(string flavorCake, string frostingFlavor, string colorSprinkles, int quantity) :
+   Cake(flavorCake, frostingFlavor, BASE_CUPCAKE_PRICE, quantity) {
    sprinklesColor = colorSprinkles;
    totalCupCakeQuantity += quantity;
 }
@@ -33,7 +31,6 @@ double CupCake::DiscountedPrice(int totalGoods) {
 int CupCake::GetQuantity() {
    return cakeQuantity;
 }
-
 int CupCake::GetTotalQuantity() {
    return totalCupCakeQuantity;
 }

@@ -1,8 +1,7 @@
 #include "Bread.h"
 
-Bread::Bread(string bakedGood, string breadOptions, int itemQuantity) :
+Bread::Bread(string breadOptions, int itemQuantity) :
    BakedGood(BREAD_BASE_PRICE) {
-   bakedGoodType = bakedGood;
    breadType = breadOptions;
    quantity = itemQuantity;
    totalBreadQuantity += itemQuantity;

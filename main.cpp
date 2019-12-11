@@ -31,7 +31,7 @@ int main() {
          cin >> options;
          cin >> quantity;
          for (int i = 0; i < quantity; ++i) {
-            Bread* newBread = new Bread(bakedGoodType, options, quantity);
+            Bread* newBread = new Bread(options, quantity);
             theGoods.push_back(newBread);
          }
       }
@@ -45,7 +45,7 @@ int main() {
          cin >> layers;
          cin >> quantity;
          for (int i = 0; i < quantity; ++i) {
-            LayerCake* newLayerCake = new LayerCake(bakedGoodType, cakeFlavor, frostingFlavor, layers, quantity);
+            LayerCake* newLayerCake = new LayerCake(cakeFlavor, frostingFlavor, layers, quantity);
             newLayerCake->addToPrice(layers);
             theGoods.push_back(newLayerCake);
          }
@@ -59,7 +59,7 @@ int main() {
          cin >> colorSprinkles;
          cin >> quantity;
          for (int i = 0; i < quantity; ++i) {
-            CupCake* newCupCake = new CupCake(bakedGoodType, flavorCake, frostingFlavor, colorSprinkles, quantity);
+            CupCake* newCupCake = new CupCake(flavorCake, frostingFlavor, colorSprinkles, quantity);
             if (frostingFlavor == "cream-cheese") {
                newCupCake->addToPrice(.20);
             }
